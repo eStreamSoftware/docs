@@ -1,0 +1,6 @@
+[submodule "docs-account"]
+	path = docs-account
+	url = https://github.com/songlim327/docs-account.git
+[submodule "docs-payroll"]
+	path = docs-payroll
+	url = https://github.com/songlim327/docs-payroll.git
