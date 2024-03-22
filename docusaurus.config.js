@@ -11,10 +11,10 @@ const config = {
   title: "SQL Documentation",
   tagline: "SQL Documentation",
   favicon: "img/logo.png",
-  staticDirectories: ["static", "docs-account/static", "docs-payroll/static"],
+  staticDirectories: ["static", "docs-sqlacc/static", "docs-sqlpay/static"],
 
   // Set the production url of your site here
-  url: "https://example.com",
+  url: "https://docs.sql.com.my",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
@@ -38,7 +38,7 @@ const config = {
           customCss: ["./src/css/custom.css"],
         },
         docs: {
-          path: "docs-account/docs",
+          path: "docs-sqlacc/docs",
           routeBasePath: "/",
           sidebarPath: "./sidebars.js",
         },
@@ -49,9 +49,9 @@ const config = {
     [
       "@docusaurus/plugin-content-docs",
       {
-        id: "payroll",
-        path: "docs-payroll/docs",
-        routeBasePath: "payroll",
+        id: "sqlpay",
+        path: "docs-sqlpay/docs",
+        routeBasePath: "sqlpay",
         sidebarPath: "./sidebars.js",
       },
     ],
@@ -73,16 +73,16 @@ const config = {
             position: "left",
             to: "/",
             label: "SQL Account",
-            activeBaseRegex: "^(?!/payroll).*",
+            activeBaseRegex: "^(?!/sqlpay).*",
           },
           {
             position: "left",
-            to: "/payroll",
+            to: "/sqlpay",
             label: "SQL Payroll",
           },
           {
             position: "right",
-            href: "https://github.com",
+            href: "https://github.com/eStreamSoftware/docs",
             className: "header-github-link",
             "aria-label": "GitHub repository",
           },
@@ -124,7 +124,7 @@ const config = {
         hashed: true,
         indexDocs: true,
         indexBlog: false,
-        docsRouteBasePath: ["/", "/payroll"],
+        docsRouteBasePath: ["/", "/sqlpay"],
       },
     ],
   ],

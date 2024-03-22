@@ -1,6 +1,6 @@
-[submodule "docs-account"]
-	path = docs-account
-	url = https://github.com/songlim327/docs-account.git
-[submodule "docs-payroll"]
-	path = docs-payroll
-	url = https://github.com/songlim327/docs-payroll.git
+[submodule "docs-sqlacc"]
+	path = docs-sqlacc
+	url = ../docs-sqlacc
+[submodule "docs-sqlpay"]
+	path = docs-sqlpay
+	url = ../docs-sqlpay
