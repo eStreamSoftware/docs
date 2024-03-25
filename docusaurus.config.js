@@ -66,7 +66,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: "img/docusaurus-social-card.jpg",
+      image: "img/logo.png",
       navbar: {
         hideOnScroll: true,
         title: "",
@@ -120,6 +120,23 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
+      metadata: [
+        {
+          name: "keywords",
+          content:
+            "SQL, SQL Account, SQL Payroll, Documentation, Account, Payroll, Accounting Software, Payroll Software",
+        },
+        {
+          name: "og:title",
+          content:
+            "SQL Documentation",
+        },
+        {
+          name: "og:description",
+          content:
+            "SQL Documentation is a library consisting of all SQL software documentation.",
+        },
+      ],
     }),
   themes: [
     [
