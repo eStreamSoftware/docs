@@ -28,7 +28,6 @@ const config = {
     defaultLocale: "en",
     locales: ["en"],
   },
-
   presets: [
     [
       "classic",
@@ -49,6 +48,7 @@ const config = {
     ],
   ],
   plugins: [
+    "plugin-image-zoom",
     [
       "@docusaurus/plugin-content-docs",
       {
@@ -120,6 +120,19 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
+      imageZoom: {
+        // CSS selector to apply the plugin to, defaults to '.markdown img'
+        selector: ".markdown img",
+        // Optional medium-zoom options
+        // see: https://www.npmjs.com/package/medium-zoom#options
+        options: {
+          margin: 24,
+          // background: "#BADA55",
+          // scrollOffset: 0,
+          // container: "#zoom-container",
+          // template: "#zoom-template",
+        },
+      },
       metadata: [
         {
           name: "keywords",
@@ -128,13 +141,15 @@ const config = {
         },
         {
           name: "og:title",
-          content:
-            "SQL Documentation",
+          content: "SQL Documentation",
         },
         {
           name: "og:description",
-          content:
-            "SQL Documentation is a library consisting of all SQL software documentation.",
+          content: "SQL Documentation is a library consisting of all SQL software documentation.",
+        },
+        {
+          name: "og:image",
+          content: "img/favicon.png",
         },
       ],
     }),
