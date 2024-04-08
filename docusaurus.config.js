@@ -10,7 +10,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 const config = {
   title: "SQL Documentation",
   tagline: "SQL Documentation",
-  favicon: "img/logo.png",
+  favicon: "img/favicon.png",
   staticDirectories: ["static", "docs-sqlacc/static", "docs-sqlpay/static"],
 
   // Set the production url of your site here
