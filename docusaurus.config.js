@@ -10,7 +10,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 const config = {
   title: "SQL Documentation",
   tagline: "SQL Documentation",
-  favicon: "img/favicon.png",
+  favicon: "https://cdn.sql.com.my/wp-content/uploads/2024/05/sql-logo-256.png",
   staticDirectories: ["static", "docs-sqlacc/static", "docs-sqlpay/static"],
 
   // Set the production url of your site here
@@ -149,7 +149,7 @@ const config = {
         },
         {
           name: "og:image",
-          content: "img/favicon.png",
+          content: "https://cdn.sql.com.my/wp-content/uploads/2024/05/sql-logo-256.png",
         },
       ],
     }),
