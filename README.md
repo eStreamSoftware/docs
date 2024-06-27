@@ -51,7 +51,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 
 ## Contributors
 
-We would like to express our gratitude to all individuals who had contributed to this project! For anyone who wish to contribute to this project, we recommend taking a look at [our contributor guide](https://github.com/eStreamSoftware/docs/CONTRIBUTING.md).
+We would like to express our gratitude to all individuals who had contributed to this project! For anyone who wish to contribute to this project, we recommend taking a look at [our contributor guide](CONTRIBUTING.md).
 
 <a href="https://github.com/eStreamSoftware/docs/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=eStreamSoftware/docs" />
