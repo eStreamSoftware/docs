@@ -38,7 +38,7 @@ const config = {
         },
         docs: {
           path: "docs-sqlacc/docs",
-          routeBasePath: "/",
+          routeBasePath: "sqlacc",
           sidebarPath: "./sidebars.js",
           editUrl: ({ versionDocsDirPath, docPath }) => {
             return `https://github.com/eStreamSoftware/docs-sqlacc/edit/master/docs/${docPath}`;
@@ -61,6 +61,19 @@ const config = {
         },
       },
     ],
+    [
+      "@docusaurus/plugin-client-redirects",
+      {
+        createRedirects(existingPath) {
+          console.log(existingPath);
+          if (existingPath.includes("/sqlacc")) {
+            //   // Redirect from /X to /sqlacc/X
+            return existingPath.replace("/sqlacc", "");
+          }
+          return undefined; // Return a falsy value: no redirect created
+        },
+      },
+    ],
   ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -77,9 +90,9 @@ const config = {
         items: [
           {
             position: "left",
-            to: "/",
+            to: "/sqlacc",
             label: "SQL Account",
-            activeBaseRegex: "^(?!/sqlpay).*",
+            // activeBaseRegex: "^(?!/sqlpay).*",
           },
           {
             position: "left",
@@ -162,7 +175,7 @@ const config = {
         hashed: true,
         indexDocs: true,
         indexBlog: false,
-        docsRouteBasePath: ["/", "/sqlpay"],
+        docsRouteBasePath: ["/sqlacc", "/sqlpay"],
       },
     ],
   ],
