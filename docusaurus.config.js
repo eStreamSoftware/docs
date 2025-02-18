@@ -5,6 +5,7 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import { themes as prismThemes } from "prism-react-renderer";
+import path, { resolve } from "path";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -49,6 +50,20 @@ const config = {
   ],
   plugins: [
     "plugin-image-zoom",
+    function aliasPlugin(context, options) {
+      return {
+        name: "alias-plugin",
+        configureWebpack() {
+          return {
+            resolve: {
+              alias: {
+                "@src": path.resolve(__dirname, "docs-sqlacc/src"),
+              },
+            },
+          };
+        },
+      };
+    },
     [
       "@docusaurus/plugin-content-docs",
       {
