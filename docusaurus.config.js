@@ -41,9 +41,6 @@ const config = {
           path: "docs-sqlacc/docs",
           routeBasePath: "sqlacc",
           sidebarPath: "./sidebars.js",
-          editUrl: ({ versionDocsDirPath, docPath }) => {
-            return `https://github.com/eStreamSoftware/docs-sqlacc/edit/master/docs/${docPath}`;
-          },
         },
       }),
     ],
@@ -71,9 +68,6 @@ const config = {
         path: "docs-sqlpay/docs",
         routeBasePath: "sqlpay",
         sidebarPath: "./sidebars.js",
-        editUrl: ({ versionDocsDirPath, docPath }) => {
-          return `https://github.com/eStreamSoftware/docs-sqlpay/edit/master/docs/${docPath}`;
-        },
       },
     ],
     [
