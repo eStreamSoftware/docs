@@ -47,6 +47,13 @@ const config = {
   ],
   plugins: [
     "plugin-image-zoom",
+    [
+      path.resolve(__dirname, 'plugins/generate-help-json'),
+      {
+        docsPath: 'docs-sqlacc/docs',
+        outputPath: 'sqlacc'
+      },
+    ],
     function aliasPlugin(context, options) {
       return {
         name: "alias-plugin",
