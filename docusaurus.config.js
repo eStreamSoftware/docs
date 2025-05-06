@@ -48,10 +48,10 @@ const config = {
   plugins: [
     "plugin-image-zoom",
     [
-      path.resolve(__dirname, 'plugins/generate-help-json'),
+      path.resolve(__dirname, "plugins/generate-help-json"),
       {
-        docsPath: 'docs-sqlacc/docs',
-        outputPath: 'sqlacc'
+        docsPath: "docs-sqlacc/docs",
+        outputPath: "sqlacc",
       },
     ],
     function aliasPlugin(context, options) {
@@ -80,11 +80,18 @@ const config = {
     [
       "@docusaurus/plugin-client-redirects",
       {
+        redirects: [
+          {
+            from: "/sqlpay/category/hrms",
+            to: "/sqlpay/category/sql-hrms",
+          },
+        ],
         createRedirects(existingPath) {
           if (existingPath.includes("/sqlacc")) {
-            //   // Redirect from /X to /sqlacc/X
+            // Redirect from /X to /sqlacc/X
             return existingPath.replace("/sqlacc", "");
           }
+
           return undefined; // Return a falsy value: no redirect created
         },
       },
