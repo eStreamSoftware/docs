@@ -114,7 +114,6 @@ const config = {
             position: "left",
             to: "/sqlacc",
             label: "SQL Account",
-            // activeBaseRegex: "^(?!/sqlpay).*",
           },
           {
             position: "left",
