@@ -40,7 +40,7 @@ const config = {
         docs: {
           path: "docs-sqlacc/docs",
           routeBasePath: "sqlacc",
-          sidebarPath: "./sidebars.js",
+          sidebarPath: "./sidebars-sqlacc.js",
         },
       }),
     ],
@@ -74,8 +74,21 @@ const config = {
         id: "sqlpay",
         path: "docs-sqlpay/docs",
         routeBasePath: "sqlpay",
-        sidebarPath: "./sidebars.js",
+        sidebarPath: "./sidebars-sqlpay.js",
       },
+    ],
+    [
+      "@docusaurus/plugin-content-blog",
+      {
+        id: "sqlacc-changelog",
+        path: "docs-sqlacc/changelog",
+        routeBasePath: "sqlacc/changelog",
+        blogTitle: "Changelog",
+        blogDescription: "Release notes and updates.",
+        blogSidebarTitle: "Changelog",
+        blogSidebarCount: "ALL",
+        showReadingTime: false,
+      }
     ],
     [
       "@docusaurus/plugin-client-redirects",
