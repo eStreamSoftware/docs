@@ -50,8 +50,17 @@ const config = {
     [
       path.resolve(__dirname, "plugins/generate-help-json"),
       {
+        id: 'sqlacc',
         docsPath: "docs-sqlacc/docs",
         outputPath: "sqlacc",
+      },
+    ],
+    [
+      path.resolve(__dirname, "plugins/generate-help-json"),
+      {
+        id: 'sqlpay',
+        docsPath: "docs-sqlpay/docs",
+        outputPath: "sqlpay",
       },
     ],
     function aliasPlugin(context, options) {
