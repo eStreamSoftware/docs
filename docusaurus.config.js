@@ -100,6 +100,19 @@ const config = {
       }
     ],
     [
+      "@docusaurus/plugin-content-blog",
+      {
+        id: "sqlpay-changelog",
+        path: "docs-sqlpay/changelog",
+        routeBasePath: "sqlpay/changelog",
+        blogTitle: "Changelog",
+        blogDescription: "Release notes and updates.",
+        blogSidebarTitle: "Changelog",
+        blogSidebarCount: "ALL",
+        showReadingTime: false,
+      }
+    ],
+    [
       "@docusaurus/plugin-client-redirects",
       {
         redirects: [
