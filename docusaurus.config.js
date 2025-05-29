@@ -230,8 +230,9 @@ const config = {
         // `hashed` is recommended as long-term-cache of index file is possible.
         hashed: true,
         indexDocs: true,
-        indexBlog: false,
+        indexBlog: true,
         docsRouteBasePath: ["/sqlacc", "/sqlpay"],
+        blogRouteBasePath: ["/sqlacc/changelog", "/sqlpay/changelog"],
       },
     ],
   ],
