@@ -21,6 +21,7 @@ const config = {
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
+  trailingSlash: false,
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -121,14 +122,13 @@ const config = {
             to: "/sqlpay/category/sql-hrms",
           },
         ],
-        createRedirects(existingPath) {
-          if (existingPath.includes("/sqlacc")) {
-            // Redirect from /X to /sqlacc/X
-            return existingPath.replace("/sqlacc", "");
-          }
-
-          return undefined; // Return a falsy value: no redirect created
-        },
+        // createRedirects(existingPath) {
+        //   if (existingPath.includes("/sqlacc")) {
+        //     // Redirect from /X to /sqlacc/X
+        //     return existingPath.replace("/sqlacc", "");
+        //   }
+        //   return undefined; // Return a falsy value: no redirect created
+        // },
       },
     ],
   ],
