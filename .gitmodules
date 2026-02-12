@@ -4,3 +4,6 @@
 [submodule "docs-sqlpay"]
 	path = docs-sqlpay
 	url = ../docs-sqlpay
+[submodule "docs-sqlconnect"]
+	path = docs-sqlconnect
+	url = ../docs-sqlconnect

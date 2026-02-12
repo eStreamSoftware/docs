@@ -12,7 +12,7 @@ const config = {
   title: "SQL Documentation",
   tagline: "SQL Documentation",
   favicon: "https://cdn.sql.com.my/wp-content/uploads/2024/05/sql-logo-256.png",
-  staticDirectories: ["static", "docs-sqlacc/static", "docs-sqlpay/static"],
+  staticDirectories: ["static", "docs-sqlacc/static", "docs-sqlpay/static", "docs-sqlconnect/static"],
 
   // Set the production url of your site here
   url: "https://docs.sql.com.my",
@@ -88,6 +88,15 @@ const config = {
       },
     ],
     [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "sqlconnect",
+        path: "docs-sqlconnect/docs",
+        routeBasePath: "sqlconnect",
+        sidebarPath: "./sidebars-sqlconnect.js",
+      },
+    ],
+    [
       "@docusaurus/plugin-content-blog",
       {
         id: "sqlacc-changelog",
@@ -156,6 +165,11 @@ const config = {
             label: "SQL Payroll",
           },
           {
+            position: "left",
+            to: "/sqlconnect",
+            label: "SQL Connect",
+          },
+          {
             position: "right",
             href: "https://github.com/eStreamSoftware/docs",
             className: "header-github-link",
@@ -206,7 +220,7 @@ const config = {
         {
           name: "keywords",
           content:
-            "SQL, SQL Account, SQL Payroll, Documentation, Account, Payroll, Accounting Software, Payroll Software",
+            "SQL, SQL Account, SQL Payroll, SQL Connect, Documentation, Account, Payroll, Accounting Software, Payroll Software",
         },
         {
           name: "og:title",
@@ -231,7 +245,7 @@ const config = {
         hashed: true,
         indexDocs: true,
         indexBlog: true,
-        docsRouteBasePath: ["/sqlacc", "/sqlpay"],
+        docsRouteBasePath: ["/sqlacc", "/sqlpay", "/sqlconnect"],
         blogRouteBasePath: ["/sqlacc/changelog", "/sqlpay/changelog"],
       },
     ],
