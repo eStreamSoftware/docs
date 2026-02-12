@@ -47,11 +47,11 @@ const config = {
     ],
   ],
   plugins: [
-    "plugin-image-zoom",
+    "docusaurus-plugin-image-zoom",
     [
       path.resolve(__dirname, "plugins/generate-help-json"),
       {
-        id: 'sqlacc',
+        id: "sqlacc",
         docsPath: "docs-sqlacc/docs",
         outputPath: "sqlacc",
       },
@@ -59,7 +59,7 @@ const config = {
     [
       path.resolve(__dirname, "plugins/generate-help-json"),
       {
-        id: 'sqlpay',
+        id: "sqlpay",
         docsPath: "docs-sqlpay/docs",
         outputPath: "sqlpay",
       },
@@ -107,7 +107,7 @@ const config = {
         blogSidebarTitle: "Changelog",
         blogSidebarCount: "ALL",
         showReadingTime: false,
-      }
+      },
     ],
     [
       "@docusaurus/plugin-content-blog",
@@ -120,7 +120,7 @@ const config = {
         blogSidebarTitle: "Changelog",
         blogSidebarCount: "ALL",
         showReadingTime: false,
-      }
+      },
     ],
     [
       "@docusaurus/plugin-client-redirects",
@@ -203,18 +203,13 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
-      imageZoom: {
-        // CSS selector to apply the plugin to, defaults to '.markdown img'
+      zoom: {
         selector: ".markdown img",
-        // Optional medium-zoom options
-        // see: https://www.npmjs.com/package/medium-zoom#options
-        options: {
-          margin: 24,
-          // background: "#BADA55",
-          // scrollOffset: 0,
-          // container: "#zoom-container",
-          // template: "#zoom-template",
+        background: {
+          light: "rgb(255, 255, 255)",
+          dark: "rgb(50, 50, 50)",
         },
+        config: {},
       },
       metadata: [
         {
