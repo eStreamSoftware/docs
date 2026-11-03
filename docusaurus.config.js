@@ -6,6 +6,13 @@
 
 import { themes as prismThemes } from "prism-react-renderer";
 import path from "path";
+import fs from "fs";
+
+const changelogRoot = path.resolve(__dirname, "changelogs");
+const changelogsDirs = fs
+  .readdirSync(changelogRoot, { withFileTypes: true })
+  .filter((entry) => entry.isDirectory())
+  .map((dir) => dir.name);
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -51,6 +58,7 @@ const config = {
     ],
   ],
   plugins: [
+    path.resolve(__dirname, "plugins/changelogs-dirs"),
     "docusaurus-plugin-image-zoom",
     [
       path.resolve(__dirname, "plugins/generate-help-json"),
@@ -76,6 +84,7 @@ const config = {
             resolve: {
               alias: {
                 "@src": path.resolve(__dirname, "docs-sqlacc/src"),
+                "@root": path.resolve(__dirname, "./src")
               },
             },
           };
@@ -100,32 +109,19 @@ const config = {
         sidebarPath: "./sidebars-sqlconnect.js",
       },
     ],
-    [
+    ...changelogsDirs.map((dir) => [
       "@docusaurus/plugin-content-blog",
       {
-        id: "sqlacc-changelog",
-        path: "docs-sqlacc/changelog",
-        routeBasePath: "sqlacc/changelog",
+        id: `changelogs-${dir}`,
+        path: `changelogs/${dir}`,
+        routeBasePath: `/changelogs/${dir}`,
         blogTitle: "Changelog",
         blogDescription: "Release notes and updates.",
         blogSidebarTitle: "Changelog",
         blogSidebarCount: "ALL",
         showReadingTime: false,
       },
-    ],
-    [
-      "@docusaurus/plugin-content-blog",
-      {
-        id: "sqlpay-changelog",
-        path: "docs-sqlpay/changelog",
-        routeBasePath: "sqlpay/changelog",
-        blogTitle: "Changelog",
-        blogDescription: "Release notes and updates.",
-        blogSidebarTitle: "Changelog",
-        blogSidebarCount: "ALL",
-        showReadingTime: false,
-      },
-    ],
+    ]),
     [
       "@docusaurus/plugin-client-redirects",
       {
@@ -172,6 +168,11 @@ const config = {
             position: "left",
             to: "/sqlconnect",
             label: "SQL Connect",
+          },
+          {
+            position: "left",
+            to: "/changelogs",
+            label: "Changelogs",
           },
           {
             position: "right",
@@ -245,7 +246,7 @@ const config = {
         indexDocs: true,
         indexBlog: true,
         docsRouteBasePath: ["/sqlacc", "/sqlpay", "/sqlconnect"],
-        blogRouteBasePath: ["/sqlacc/changelog", "/sqlpay/changelog"],
+        blogRouteBasePath: changelogsDirs.map((dir) => `/changelogs/${dir}`),
       },
     ],
   ],

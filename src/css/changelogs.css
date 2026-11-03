@@ -1,0 +1,46 @@
+.changelog-card {
+  cursor: pointer;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid rgba(28, 31, 35, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 1);
+  transition: all 0.2s ease-in-out;
+  height: 100%;
+  text-decoration: none;
+}
+
+.changelog-card:hover {
+  transform: translateY(-4px);
+  text-decoration: none;
+  border: 1px solid var(--ifm-link-color);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.changelog-card-content {
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: rgba(28, 31, 35, 0.9);
+}
+
+[data-theme="dark"] {
+  .changelog-card {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: #1b1b1d;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .changelog-card-content {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .changelog-card:hover {
+    border: 1px solid var(--ifm-link-color);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+}

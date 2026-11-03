@@ -7,3 +7,6 @@
 [submodule "docs-sqlconnect"]
 	path = docs-sqlconnect
 	url = ../docs-sqlconnect
+[submodule "changelogs"]
+	path = changelogs
+	url = https://github.com/eStreamSoftware/changelogs
